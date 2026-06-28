@@ -3,47 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SouthReel AI</title>
+<title>SouthReel AI Pro</title>
+
+<style>
+body{
+background:#111;
+color:white;
+font-family:Arial,sans-serif;
+padding:20px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+h1{
+color:#00ff99;
+}
+
+textarea,select{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:18px;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:15px;
+font-size:20px;
+background:#00ff99;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#00dd88;
+}
+
+pre{
+margin-top:20px;
+background:#222;
+padding:15px;
+border-radius:10px;
+white-space:pre-wrap;
+}
+</style>
+
 </head>
 
-<body style="background:#111;color:white;font-family:Arial;padding:20px;">
+<body>
 
-<h1>🎬 SouthReel AI</h1>
+<div class="container">
 
-<textarea id="topic" placeholder="Enter Topic"
-style="width:100%;height:120px;font-size:18px;"></textarea>
+<h1>🎬 SouthReel AI Pro</h1>
 
-<br><br>
+<label>Video Topic</label>
 
-<button onclick="generate()" style="padding:15px 30px;font-size:18px;">
-Generate Script
+<textarea id="topic" placeholder="Example: Pushpa 3"></textarea>
+
+<label>Language</label>
+
+<select id="language">
+<option>English</option>
+<option>Hindi</option>
+<option>Gujarati</option>
+</select>
+
+<label>Category</label>
+
+<select id="category">
+<option>Movies</option>
+<option>Football</option>
+<option>Gaming</option>
+<option>Technology</option>
+<option>News</option>
+</select>
+
+<button onclick="generate()">
+🚀 Generate Content
 </button>
 
-<pre id="output" style="white-space:pre-wrap;margin-top:20px;"></pre>
+<pre id="output"></pre>
+
+</div>
 
 <script>
-async function generate(){
+
+function generate(){
 
 let topic=document.getElementById("topic").value;
-
-document.getElementById("output").innerText="Generating...";
+let lang=document.getElementById("language").value;
+let cat=document.getElementById("category").value;
 
 document.getElementById("output").innerText=
-`🎬 Title: ${topic}
 
-🔥 Hook:
-This is an amazing video about ${topic}.
+`🎬 Title
+${topic}
 
-📜 Script:
+🌍 Language
+${lang}
+
+📂 Category
+${cat}
+
+🔥 Hook
+Amazing update about ${topic}
+
+📝 Script
 Welcome to SouthReel AI.
-Today we are talking about ${topic}.
-This video covers the latest updates, interesting facts, and why everyone is excited.
-Watch until the end for more amazing content.
 
-👉 CTA:
-Like 👍 Share ❤️ Subscribe 🔔`;
+Today we are talking about ${topic}.
+
+Watch till the end.
+
+👍 Like ❤️ Share 🔔 Subscribe`;
 
 }
+
 </script>
 
 </body>
