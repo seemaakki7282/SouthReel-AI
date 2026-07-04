@@ -99,7 +99,7 @@ const API_KEY = "AQ.Ab8RN6J46OVxLbCBevSONt90k3kud2ak52fn7eNBzjEYvvkMeA";
 async function askGemini(prompt){
 
 const response = await fetch(
-`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${AQ.Ab8RN6J46OVxLbCBevSONt90k3kud2ak52fn7eNBzjEYvvkMeA}`,
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
 {
   method: "POST",
   headers: {
